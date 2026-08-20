@@ -20,6 +20,7 @@ The controller operates using a 4-state Finite State Machine:
 The design was verified using a behavioral testbench in Vivado simulating an SPI Slave responding with alternating bits (`0xAA`).
 
 ### Waveform Highlights:
+![Waveform](waveform/SPI_waveform.png)
 * **TX Transmission:** `tx_data = 0xA5` (`10100101`) successfully serialized over `mosi`.
 * **RX Reception:** Captured `miso` toggles into `rx_data = 0xAA` (`10101010`).
 * **Handshaking:** `busy` remains high throughout transaction; `done` pulses high exactly upon completion.
